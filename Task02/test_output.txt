@@ -1,0 +1,5 @@
+bus    links  5 cost Rs   8.5 lakh E and F survive 3/5 cuts
+ring   links  6 cost Rs  10.2 lakh E and F survive 6/6 cuts
+star   links  5 cost Rs   8.5 lakh E and F survive 3/5 cuts
+mesh   links 15 cost Rs  25.5 lakh E and F survive 15/15 cuts
+hybrid links  6 cost Rs  10.2 lakh E and F survive 6/6 cuts
