@@ -1,0 +1,35 @@
+enable
+configure terminal
+hostname SW-Library
+vlan 100
+ name Staff
+vlan 200
+ name Students
+vlan 300
+ name Guest
+vlan 99
+ name Native-Mgmt
+interface range FastEthernet0/1 - 8
+ switchport mode access
+ switchport access vlan 100
+ spanning-tree portfast
+exit
+interface range FastEthernet0/9 - 20
+ switchport mode access
+ switchport access vlan 200
+ spanning-tree portfast
+exit
+interface range FastEthernet0/21 - 24
+ switchport mode access
+ switchport access vlan 300
+ spanning-tree portfast
+exit
+interface GigabitEthernet0/1
+ switchport mode trunk
+ switchport trunk native vlan 99
+ switchport trunk allowed vlan 99,100,200,300
+exit
+end
+write memory
+show vlan brief
+show interfaces trunk
